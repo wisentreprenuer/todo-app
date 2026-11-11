@@ -16,7 +16,7 @@
     <!-- Containter -->
     <div class="h-screen mx-auto w-screen flex flex-col items-center">
       <!-- Header Section -->
-      <header class="sticky top-0 pt-8 w-100 mx-auto mb-2 bg-gray-200 flex flex-col items-center">
+      <header class="sticky top-0 pt-8 z-20 w-100 mx-auto mb-2 bg-gray-200 flex flex-col items-center">
         <h1 class=" font-bold text-2xl text-[#27286e]">Today's Tasks</h1>
         <div class="text-gray-400">
           <span id="completed">0</span>
@@ -86,7 +86,7 @@
 
       <!-- Add Task Button -->
       <section>
-        <div class="fixed bottom-29 right-[50%] sm:bottom-5 sm:right-[30vw]">
+        <div class="fixed bottom-10 right-[45%] sm:bottom-5 sm:right-[30vw]">
           <button
             id="addTaskBtn"
             class="cursor-pointer hover:scale-[0.95] bg-[#89be2b] text-white font-bold p-4 rounded-full transition-all duration-100"
@@ -111,8 +111,8 @@
       </section>
 
       <!-- Popup Section -->
-      <section class="flex justify-center">
-        <div id="popup" class="hidden w-100 h-auto">
+      <section class="absolute top-[28vh] flex justify-center">
+        <div id="popup" class="hidden w-[90vw] h-auto px-10 py-10 bg-gray-400/10 rounded-2xl">
         <form id="addTaskForm">
           <label for="taskInput" class="text-[#27286e] font-bold cursor-pointer">
             What are we doing next?
