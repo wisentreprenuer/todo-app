@@ -14,9 +14,9 @@
   </head>
   <body class="bg-gray-200 font-dm-sans">
     <!-- Containter -->
-    <div class="min-h-screen mx-auto w-100 flex flex-col items-center">
+    <div class="h-screen mx-auto w-screen flex flex-col items-center">
       <!-- Header Section -->
-      <header class="relative top-0 z-50 pt-8 w-100 mx-auto mb-2 bg-gray-200 flex flex-col items-center">
+      <header class="sticky top-0 pt-8 w-100 mx-auto mb-2 bg-gray-200 flex flex-col items-center">
         <h1 class=" font-bold text-2xl text-[#27286e]">Today's Tasks</h1>
         <div class="text-gray-400">
           <span id="completed">0</span>
@@ -26,7 +26,7 @@
         </div>
 
         <div class="w-full formSection flex justify-center">
-          <form id="searchForm" class="w-full">
+          <form id="searchForm" class="w-[90%]">
             <!-- Search Search -->
             <label
               for="searchInput"
@@ -61,18 +61,24 @@
             </label>
           </form>
         </div>
-        <button title="Clear All Tasks" class="clear-all absolute -right-19 bottom-0 w-20 border-none flex flex-row justify-between px-3 py-2 text-[8px] text-gray-400 rounded cursor-pointer hover:text-gray-700 hover:scale-[0.95] transition-all duration-300">
-          <!-- <span> Clear all </span> -->
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=" lucide lucide-trash preview-icon "><path d="M10 11v6"/><path d="M14 11v6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M3 6h18"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+
+        <div class="flex gap-x-20 mt-3 text-gray-500 ">
+          <button title="Clear All Tasks" class="clear-all border-none flex flex-row items-center gap-x-2 px-3 py-2 text-[16px]  rounded cursor-pointer hover:text-gray-700 hover:scale-[0.95] transition-all duration-300">
+          <span> Clear all </span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=" lucide lucide-trash preview-icon "><path d="M10 11v6"/><path d="M14 11v6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M3 6h18"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
         </button>
-        <button class="sort-all absolute -right-30 bottom-0 w-20 border-none flex flex-row justify-between px-3 py-2 text-[8px] text-gray-400 rounded cursor-pointer hover:text-gray-700 hover:scale-[0.95] transition-all duration-300">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=" lucide lucide-list-sort-descending preview-icon"><path d="M15 12H3"/><path d="M3 5h18"/><path d="M9 19H3"/></svg>
+
+        <button class="sort-all border-none flex flex-row items-center gap-x-2 px-3 py-2 text-[16px]  rounded cursor-pointer hover:text-gray-700 hover:scale-[0.95] transition-all duration-300">
+          <span>Filter</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=" lucide lucide-list-sort-descending preview-icon"><path d="M15 12H3"/><path d="M3 5h18"/><path d="M9 19H3"/></svg>
         </button>
+        </div>
+        
       </header>
 
       <!-- List of Tasks -->
-      <section class="w-full">
-        <ul id="taskList" class="max-w-screen min-h-[50vh] pb-30 flex flex-col items-center gap-y-2">
+      <section class="w-[90vw] sm:max-w-[30vw]">
+        <ul id="taskList" class="w-full pt-4 flex flex-col gap-y-2">
           
         </ul>
       </section>
@@ -80,7 +86,7 @@
 
       <!-- Add Task Button -->
       <section>
-        <div class="absolute bottom-5 right-[30vw]">
+        <div class="fixed bottom-29 right-[50%] sm:bottom-5 sm:right-[30vw]">
           <button
             id="addTaskBtn"
             class="cursor-pointer hover:scale-[0.95] bg-[#89be2b] text-white font-bold p-4 rounded-full transition-all duration-100"
