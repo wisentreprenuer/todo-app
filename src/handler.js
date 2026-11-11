@@ -101,7 +101,7 @@ function createTodoItem(task, index) {
               stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
-              class="lucide lucide-trash preview-icon ml-4 shrink-0 stroke-gray-300 hover:stroke-red-500 transition-colors duration-200 opacity-0 group-hover/delete-icon:opacity-100"
+              class="lucide lucide-trash preview-icon ml-4 shrink-0 stroke-gray-300 hover:stroke-red-500 transition-colors duration-200 opacity-0 group-hover/delete-icon:opacity-100 group-has-[input:checked]/delete-icon:opacity-50"
             >
               <path d="M10 11v6" />
               <path d="M14 11v6" />
